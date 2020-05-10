@@ -5,7 +5,7 @@ import 'package:meta/meta.dart';
 import 'package:flutter/services.dart';
 
 class Tensorflowexjobb {
-  static const MethodChannel _channel = const MethodChannel('tflite');
+  static const MethodChannel _channel = const MethodChannel('tensorflowexjobb');
 
   static Future<String> loadModel({
     @required String model,

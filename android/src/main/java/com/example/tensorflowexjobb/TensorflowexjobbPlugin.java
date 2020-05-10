@@ -79,7 +79,7 @@ public class TensorflowexjobbPlugin implements MethodCallHandler {
   List<Integer> childToParentEdges = new ArrayList<>();
 
   public static void registerWith(Registrar registrar) {
-    final MethodChannel channel = new MethodChannel(registrar.messenger(), "tflite");
+    final MethodChannel channel = new MethodChannel(registrar.messenger(), "tensorflowexjobb");
     channel.setMethodCallHandler(new TensorflowexjobbPlugin(registrar));
   }
 
