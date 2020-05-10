@@ -44,13 +44,18 @@ class Tensorflowexjobb {
     );
   }
 
-  static Future<List> loadImageBitmap(
-      {@required String path,
-      bool asynch = true}) async {
+  static Future<List> loadImageBitmap({
+    @required String path,
+    double imageMean = 117.0,
+    double imageStd = 1.0,
+    bool asynch = true
+  }) async {
     return await _channel.invokeMethod(
       'loadImageBitmap',
       {
         "path": path,
+        "imageMean": imageMean,
+        "imageStd": imageStd,
         "asynch": asynch,
       },
     );
