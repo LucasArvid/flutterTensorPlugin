@@ -363,15 +363,18 @@ public class TensorflowexjobbPlugin implements MethodCallHandler {
     return imgData;
   }
 
-  ByteBuffer feedInputTensorImageGlobal((HashMap args, Result result) throws IOException {
+  ByteBuffer feedInputTensorImageGlobal(HashMap args, Result result) throws IOException {
     String path = args.get("path").toString();
-    float IMAGE_STD = (float) std;
+    double mean = (double) (args.get("imageMean"));
     float IMAGE_MEAN = (float) mean;
+    double std = (double) (args.get("imageStd"));
+    float IMAGE_STD = (float) std;
+
       
     InputStream inputStream = new FileInputStream(path.replace("file://", ""));
     Bitmap bitmapRaw = BitmapFactory.decodeStream(inputStream);
 
-    _imgData = feedInputTensor(bitmapRaw, mean, std);
+    _imgData = feedInputTensor(bitmapRaw, IMAGE_MEAN, IMAGE_STD);
   }
 
   ByteBuffer feedInputTensorImage(String path, float mean, float std) throws IOException {
