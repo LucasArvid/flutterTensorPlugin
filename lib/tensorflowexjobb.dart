@@ -56,6 +56,10 @@ class Tensorflowexjobb {
     );
   }
 
+    static Future close() async {
+    return await _channel.invokeMethod('close');
+  }
+
   static Future<String> get platformVersion async {
     final String version = await _channel.invokeMethod('getPlatformVersion');
     return version;
