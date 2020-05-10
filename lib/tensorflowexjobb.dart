@@ -44,7 +44,7 @@ class Tensorflowexjobb {
     );
   }
 
-    static Future<List> loadImageBitmap(
+  static Future<List> loadImageBitmap(
       {@required String path,
       bool asynch = true}) async {
     return await _channel.invokeMethod(
@@ -56,7 +56,7 @@ class Tensorflowexjobb {
     );
   }
 
-    static Future close() async {
+  static Future close() async {
     return await _channel.invokeMethod('close');
   }
 

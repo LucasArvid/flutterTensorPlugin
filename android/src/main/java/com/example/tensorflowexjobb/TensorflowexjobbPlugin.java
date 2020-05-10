@@ -104,12 +104,7 @@ public class TensorflowexjobbPlugin implements MethodCallHandler {
       }
     } else if (call.method.equals("loadImageBitmap")) {
       try {
-
-
-        new feedInputTensorImageGlobal((HashMap) call.arguments, result);
-
-
-
+        feedInputTensorImageGlobal((HashMap) call.arguments, result);
       } catch (Exception e) {
         result.error("Failed to run model", e.getMessage(), e);
       }
