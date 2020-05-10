@@ -363,7 +363,7 @@ public class TensorflowexjobbPlugin implements MethodCallHandler {
     return imgData;
   }
 
-  ByteBuffer feedInputTensorImageGlobal(HashMap args, Result result) throws IOException {
+  public void feedInputTensorImageGlobal(HashMap args, Result result) throws IOException {
     String path = args.get("path").toString();
     double mean = (double) (args.get("imageMean"));
     float IMAGE_MEAN = (float) mean;
