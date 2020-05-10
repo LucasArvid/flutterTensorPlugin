@@ -375,6 +375,7 @@ public class TensorflowexjobbPlugin implements MethodCallHandler {
     Bitmap bitmapRaw = BitmapFactory.decodeStream(inputStream);
 
     _imgData = feedInputTensor(bitmapRaw, IMAGE_MEAN, IMAGE_STD);
+    result.success("0");
   }
 
   ByteBuffer feedInputTensorImage(String path, float mean, float std) throws IOException {
