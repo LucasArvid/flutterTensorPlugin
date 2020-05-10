@@ -1,4 +1,4 @@
-package sq.flutter.tensorflowexjobb;
+package com.example.tensorflowexjobb;
 
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;
