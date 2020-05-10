@@ -44,7 +44,7 @@ class Tensorflowexjobb {
     );
   }
 
-  static Future<List> loadImageBitmap({
+  static Future<String> loadImageBitmap({
     @required String path,
     double imageMean = 117.0,
     double imageStd = 1.0,
